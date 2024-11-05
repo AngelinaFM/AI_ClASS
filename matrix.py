@@ -1,4 +1,4 @@
-# Menggunakan Library Numpy
+# Program yang Menggunakan Library Numpy
 import numpy as np
 
 # Mendefinisikan matriks
@@ -38,7 +38,7 @@ except ValueError as e:
 
 
 
-# Tanpa Library Numpy
+# Program Tanpa Library Numpy
 # Mendefinisikan matriks
 A = [[3, 0], [-1, 2], [1, 1]]
 B = [[4, -1], [0, 2]]
@@ -50,21 +50,21 @@ E = [[6, 1, 3], [-1, 1, 2], [4, 1, 3]]
 def matrix_multiply(X, Y):
     # Cek apakah jumlah kolom X sama dengan jumlah baris Y
     if len(X[0]) != len(Y):
-        raise ValueError("Ukuran matriks tidak sesuai untuk perkalian.")
+        raise ValueError("Ukuran pada matriks tidak sesuai untuk perkalian.")
     return [[sum(a * b for a, b in zip(X_row, Y_col)) for Y_col in zip(*Y)] for X_row in X]
 
 # Fungsi untuk penjumlahan matriks
 def matrix_add(X, Y):
     # Cek apakah ukuran matriks X dan Y sama
     if len(X) != len(Y) or len(X[0]) != len(Y[0]):
-        raise ValueError("Ukuran matriks tidak sesuai untuk penjumlahan.")
+        raise ValueError("Ukuran pada matriks tidak sesuai untuk penjumlahan.")
     return [[X[i][j] + Y[i][j] for j in range(len(X[0]))] for i in range(len(X))]
 
 # Fungsi untuk pengurangan matriks
 def matrix_subtract(X, Y):
     # Cek apakah ukuran matriks X dan Y sama
     if len(X) != len(Y) or len(X[0]) != len(Y[0]):
-        raise ValueError("Ukuran matriks tidak sesuai untuk pengurangan.")
+        raise ValueError("Ukuran pada matriks tidak sesuai untuk pengurangan.")
     return [[X[i][j] - Y[i][j] for j in range(len(X[0]))] for i in range(len(X))]
 
 # Perkalian Matriks A * C
